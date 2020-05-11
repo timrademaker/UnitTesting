@@ -1,8 +1,8 @@
 # UnitTesting
  Example projects accompanying a series of articles I wrote.
  
- [Microsoft CppUnitTest Framework](https://timrademaker405547824.wordpress.com/2020/05/05/unit-testing-microsoft-cppunittest-framework-c/)
+[Microsoft CppUnitTest Framework](https://timrademaker405547824.wordpress.com/2020/05/05/unit-testing-microsoft-cppunittest-framework-c/)
  
-Google Test (Not yet published)
+[Google Test](https://timrademaker405547824.wordpress.com/2020/05/11/unit-testing-google-test-c/)
  
 CTest (Not yet published)
