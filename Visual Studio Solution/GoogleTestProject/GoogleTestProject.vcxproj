@@ -36,7 +36,7 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AssertExamples.cpp" />
+    <ClCompile Include="TestExamples.cpp" />
     <ClCompile Include="ExpectedExamples.cpp" />
     <ClCompile Include="InitializationExamples.cpp" />
     <ClCompile Include="pch.cpp">
