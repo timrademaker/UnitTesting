@@ -33,15 +33,37 @@ endif()
 set(SOURCES 
     UnitTests.cpp 
     MoreUnitTests.cpp 
+    PainterTests.cpp
+    GameObjectTests.cpp
 )
+
+#foreach(test ${SOURCES})
+#    string(FIND ${test} "." dotpos REVERSE)
+#    string(SUBSTRING ${test} 0 ${dotpos} test_name)
+#    string(CONCAT test_name ${test_name} "_gtest")
+#
+#    add_executable(${test_name} ${test})
+#    target_compile_options(${test_name} PUBLIC ${GTEST_CFLAGS})
+#    target_link_libraries(${test_name} ${GTEST_LDFLAGS})
+#    target_link_libraries(${test_name} gtest gtest_main gmock gmock_main)
+#    
+#    target_link_libraries(${test_name} Project)
+#    target_link_libraries(${test_name} Project_Test)
+#    
+#    target_include_directories( ${test_name}
+#        PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/inc
+#    )
+#    
+#    add_test(${test_name} ${test_name})
+#endforeach()
 
 set(test_name gtests)
 add_executable(${test_name} ${SOURCES})
 target_compile_options(${test_name} PUBLIC ${GTEST_CFLAGS})
 target_link_libraries(${test_name} ${GTEST_LDFLAGS})
-target_link_libraries(${test_name} gtest gtest_main)
+target_link_libraries(${test_name} gtest gtest_main gmock gmock_main)
     
-target_link_libraries(${test_name} Project)
+target_link_libraries(${test_name} Project Project_Test)
     
 target_include_directories( ${test_name}
     PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/inc
